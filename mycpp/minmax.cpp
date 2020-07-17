@@ -2,42 +2,29 @@
 using namespace std;
 int main()
 {
-	long n,i,min=101,max=1,count,count1;
+	long long n,i,max,min,sum;
 	cin>>n;
-	long a[n];
+	long long a[n];
 	for(i=0;i<n;i++)
 	{
 		cin>>a[i];
-		if(a[i]>=max)
+	}
+	max=0;
+	sum=0;
+	min=0;
+	for(i=0;i<n;i++)
+	{
+		sum=sum+a[i];
+		if(a[i]>a[max])
 		{
-			max=a[i];
+			max=i;
 		}
-		if(a[i]<=min)
+		if(a[i]<a[min])
 		{
-			min=a[i];
+			min=i;
 		}
 	}
-	count=min,count1=min;
- 	while(count<=max)
- 	{
- 		count++;
- 		for(i=0;i<n;i++)
- 		{
- 			if(count==a[i])
- 			{
- 				count1++;
- 				break;
- 			}
- 		}
- 		
- 	}
- 	if(count1==max)
- 	{
- 		cout<<"YES";
- 	}
- 	else
- 	{
- 		cout<<"NO";
- 	}
- 	return 0;
+	cout<<sum-a[max]<<" "<<sum-a[min];
+	return 0;
+	
 }

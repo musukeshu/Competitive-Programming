@@ -2,28 +2,28 @@
 using namespace std;
 int main()
 {
-	long t,n;
-	long  c,i;
-	long q;
-	long a[1000000];
+	int t,n;
+	int  c,q,i;
+	int a[100000];
 	cin>>t;
+	long b[1000000];
 	while(t--)
 	{
+	
+	b[1000000]={0};
 	cin>>n;
-    long b[1000000]={};
+	
 	for(i=0;i<n;i++)
 	{
-        cin>>a[i];  
-		b[a[i]]=i+1; 
+		cin>>a[i];
+		b[a[i]]=i;
 	}
 	cin>>q;
 	while(q--)
 	{
 		cin>>c;
-		if(c>1000000)
-		cout<<"-1"<<"\n";
-		else if(b[c]!=0)
-		cout<<b[c]<<"\n";
+		if(b[c]!=0)
+		cout<<b[c]+1<<"\n";
 		else
 		cout<<"-1"<<"\n";
 	}
