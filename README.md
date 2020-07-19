@@ -1,2 +1,2 @@
 # Competitive-Programming
-## This is to practice various questions from different websites like geeksforgeeks, codechef, hackerrank, etc.
+## Contains solutions of many questions from various competitive coding websites like Leetcode, Hackerearth, Codechef, etc. The problems can be searched either with name, code or problem number.
