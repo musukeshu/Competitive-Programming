@@ -1,11 +1,9 @@
 #include<bits/stdc++.h>
-#include<String>
 using namespace std;
-string s1;
 class Solution {
 public:
     string restoreString(string s, vector<int>& indices) {
-    	s1="";
+    	string s1=s;
         for(int i=0;i<s.length();i++)
         {
             s1[indices[i]]=s[i];
@@ -27,9 +25,7 @@ int main()
 	}
 	string s;
 	cin>>s;
-	string s2;
 	Solution obj1;
-	s2=obj1.restoreString(s,v);
-	cout<<s<<endl;
+	cout<<obj1.restoreString(s,v);
 	return 0;
 }
