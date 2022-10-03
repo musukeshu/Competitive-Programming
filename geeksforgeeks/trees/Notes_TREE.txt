@@ -1,0 +1,5 @@
+# Inorder traversal of a binary tree
+	Time Complexity = O(n)
+	Auxiliary space = O(h)
+where n is the nodes in the binary tree and h is the height of the binary tree.
+
